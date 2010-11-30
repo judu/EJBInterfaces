@@ -17,43 +17,12 @@ import javax.ejb.Remote;
 @Remote
 public interface CatalogueRemote {
 
-
-   /**
-    * Récupère un produit persisté par son id dans la table.
-    * @param id Identifiant de persistance.
-    * @return le produit s'il existe, <em>null</em> sinon.
-    */
-   public IProduit findProduit(Long id);
-
-
-   /**
-    * Renvoie tous les items du catalogue.
-    * @return
-    */
-   public List<IProduit> findAllProduits();
-
-
-   /**
-    * Renvoie une catégorie identifiée par son id de presistance.
-    * @param id
-    * @return
-    */
-   public ICategorie findCategorie(Long id);
-
-
    /**
     * Renvoie la liste des catégories.
     * @return
     */
    public List<ICategorie> findAllCategories();
 
-
-   /**
-    * Renvoie une catégorie identifiée par son nom.
-    * @param name
-    * @return
-    */
-   public ICategorie findCategorieByName(String name);
 
    /**
     * Permet de retrouver un produit par sa marque et son modèle.
@@ -78,14 +47,6 @@ public interface CatalogueRemote {
     * @param categorie la catégorie des produits voulus.
     * @return
     */
-   public List<IProduit> findByCategorie(String categorieName);
-
-
-   /**
-    *
-    * @param categorie
-    * @return
-    */
    public List<IProduit> findByCategorie(ICategorie categorie);
 
 
@@ -98,9 +59,11 @@ public interface CatalogueRemote {
     * @param highPrice La borne supérieure de l'intervalle de prix.
     * @return
     */
-   public List<IProduit> findByCategorieAndPriceRange(String categorie, Double lowPrice, Double highPrice);
+   public List<IProduit> findByCategorieAndPriceRange(ICategorie categorie, Double lowPrice, Double highPrice);
 
+   public List<IProduit> findByCategorieAndMarque(ICategorie categorie, String marque);
 
+   public List<IProduit> findByCategorieAndMarqueAndPriceRange(ICategorie categorie, String maruqe, Double lowPrice, Double highPrice);
 
     
 }
