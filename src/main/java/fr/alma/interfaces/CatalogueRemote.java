@@ -47,7 +47,7 @@ public interface CatalogueRemote {
     * @param categorie la catégorie des produits voulus.
     * @return
     */
-   public List<IProduit> findByCategorie(ICategorie categorie);
+   public List<IProduit> findByCategorie(String categorie);
 
 
    /**
@@ -59,11 +59,11 @@ public interface CatalogueRemote {
     * @param highPrice La borne supérieure de l'intervalle de prix.
     * @return
     */
-   public List<IProduit> findByCategorieAndPriceRange(ICategorie categorie, Double lowPrice, Double highPrice);
+   public List<IProduit> findByCategorieAndPriceRange(String categorie, Double lowPrice, Double highPrice);
 
-   public List<IProduit> findByCategorieAndMarque(ICategorie categorie, String marque);
+   public List<IProduit> findByCategorieAndMarque(String categorie, String marque);
 
-   public List<IProduit> findByCategorieAndMarqueAndPriceRange(ICategorie categorie, String maruqe, Double lowPrice, Double highPrice);
+   public List<IProduit> findByCategorieAndMarqueAndPriceRange(String categorie, String marque, Double lowPrice, Double highPrice);
 
     
 }
