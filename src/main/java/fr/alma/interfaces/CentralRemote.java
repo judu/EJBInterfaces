@@ -24,7 +24,7 @@ public interface CentralRemote {
 
    public List<IAProduit> findByCategorieAndPriceRange(IFrontCategorie categorie, Double lowPrice, Double highPrice);
 
-   public List<IAProduit> findByCategorieAndMarqueAndPriceRange(ICategorie categorie, String maruqe, Double lowPrice, Double highPrice);
+   public List<IAProduit> findByCategorieAndMarqueAndPriceRange(IFrontCategorie categorie, String maruqe, Double lowPrice, Double highPrice);
 
    public Boolean order(Map<IItem, Long> panier);
 }
