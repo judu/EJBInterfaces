@@ -2,25 +2,43 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package fr.alma.interfaces;
 
 /**
- *
+ * C'est maintenant une classe pour pouvoir l'instancier côté client.
  * @author E056449H
  */
-public interface IItem {
+public class IItem {
 
-    String getFournisseur();
+   private String fournisseur;
 
-    String getMarque();
+   private String marque;
 
-    String getModel();
+   private String model;
 
-    void setFournisseur(String fournisseur);
+   public String getFournisseur() {
+      return fournisseur;
+   }
 
-    void setMarque(String marque);
+   public void setFournisseur(String fournisseur) {
+      this.fournisseur = fournisseur;
+   }
 
-    void setModel(String model);
+   public String getMarque() {
+      return marque;
+   }
 
+   public void setMarque(String marque) {
+      this.marque = marque;
+   }
+
+   public String getModel() {
+      return model;
+   }
+
+   public void setModel(String model) {
+      this.model = model;
+   }
+
+   
 }
