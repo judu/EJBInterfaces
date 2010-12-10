@@ -1,1 +1,26 @@
 Interfaces pour le projet d'Objets distribués
+
+Grosse mise à jour !
+
+Nous avons vu avec Arnaud Thimel qu'il ne fallait pas utiliser des interfaces mais des classes pour transférer les informations.
+
+Donc de changé :
+
+	Ajout du package fr.alma.dto.catalogue, contenant Categorie et Produit, qui doivent être utilisées par les catalogues pour transférer les catalogues et les produits au serveur central.
+	Ajout du package fr.alma.dto.central, contenant AProduit, CProduit et Item, pour causer entre le central et les frontaux. Ici, plus d'interface, mais directement des classes.
+
+	AProduit remplace IAProduit
+	CProduit remplace ICProduit
+	Categorie remplace ICategorie et IFrontCategorie
+	Produit remplace IProduit.
+
+
+Côté interfaces, il y en a 3 :
+
+	CatalogueRemote et CentralRemote, qui contiennent les mêmes méthodes qu'avant. Verifiez les changements de types d'attributs.
+	L'implémentation de CentralRemote est CentralService.
+
+	CatalogueRegisteringRemote, qui permet aux catalogues de s'enregistrer. L'implémentation est CatalogueRegistering.
+
+	
+

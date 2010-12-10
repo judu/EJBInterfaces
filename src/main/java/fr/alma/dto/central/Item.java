@@ -2,13 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.alma.interfaces;
+package fr.alma.dto.central;
 
 /**
  * C'est maintenant une classe pour pouvoir l'instancier côté client.
  * @author E056449H
  */
-public class IItem {
+public class Item {
 
    private String fournisseur;
 
