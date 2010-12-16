@@ -3,7 +3,7 @@
 
 ## Description du fonctionnement :
 
-```console
+`console
 fr
 `-- alma
     |-- dto
@@ -18,7 +18,7 @@ fr
         |-- CatalogueRegisteringRemote.java
         |-- CatalogueRemote.java
         `-- CentralRemote.java
-```
+`
 
 
 * Le package dto contient les Data Transfert Objects, qui sont des classes définissant les objets qu'on transfère entre les différents serveurs.
