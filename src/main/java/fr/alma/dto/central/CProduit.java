@@ -15,6 +15,16 @@ public class CProduit {
 
    private Integer quantite;
 
+   private String fournisseur;
+
+   public String getFournisseur() {
+      return fournisseur;
+   }
+
+   public void setFournisseur(String fournisseur) {
+      this.fournisseur = fournisseur;
+   }
+
    public Double getPrix() {
       return prix;
    }

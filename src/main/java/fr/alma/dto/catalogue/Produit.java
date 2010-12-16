@@ -27,6 +27,16 @@ public class Produit implements Serializable {
 
    private Categorie categorie;
 
+   private Integer quantite;
+
+   public Integer getQuantite() {
+      return quantite;
+   }
+
+   public void setQuantite(Integer quantite) {
+      this.quantite = quantite;
+   }
+
    public Categorie getCategorie() {
       return categorie;
    }

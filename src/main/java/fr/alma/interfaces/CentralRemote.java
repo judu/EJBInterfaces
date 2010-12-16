@@ -68,5 +68,5 @@ public interface CentralRemote {
     * @param panier Les clés sont les produits à acheter, et les valeurs sont les quantités voulues.
     * @return
     */
-   public Boolean order(Map<Item, Integer> panier);
+   public Boolean order(Map<Item, Integer> panier, String nomClient, String adresseClient);
 }
