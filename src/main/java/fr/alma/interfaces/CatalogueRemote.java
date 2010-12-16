@@ -6,7 +6,7 @@
 package fr.alma.interfaces;
 
 import fr.alma.dto.catalogue.Categorie;
-import fr.alma.dto.central.AProduit;
+import fr.alma.dto.catalogue.Produit;
 import java.util.List;
 import javax.ejb.Remote;
 
@@ -31,7 +31,7 @@ public interface CatalogueRemote {
     * @param marque
     * @return
     */
-   public List<AProduit> findByMarque(String marque);
+   public List<Produit> findByMarque(String marque);
 
    /**
     * Permet de récupérer tous les produits classés dans la même catégorie.
@@ -39,7 +39,7 @@ public interface CatalogueRemote {
     * @param nomCateg la catégorie des produits voulus.
     * @return
     */
-   public List<AProduit> findByCategorie(String nomCateg);
+   public List<Produit> findByCategorie(String nomCateg);
 
 
    /**
@@ -51,11 +51,11 @@ public interface CatalogueRemote {
     * @param highPrice La borne supérieure de l'intervalle de prix.
     * @return
     */
-   public List<AProduit> findByCategorieAndPriceRange(String nomCateg, Double lowPrice, Double highPrice);
+   public List<Produit> findByCategorieAndPriceRange(String nomCateg, Double lowPrice, Double highPrice);
 
-   public List<AProduit> findByCategorieAndMarque(String nomCateg, String marque);
+   public List<Produit> findByCategorieAndMarque(String nomCateg, String marque);
 
-   public List<AProduit> findByCategorieAndMarqueAndPriceRange(String nomCateg, String marque, Double lowPrice, Double highPrice);
+   public List<Produit> findByCategorieAndMarqueAndPriceRange(String nomCateg, String marque, Double lowPrice, Double highPrice);
 
 	public Boolean order(String marque, String model, Integer quantity, String clientName, String clientAddress);
 }
