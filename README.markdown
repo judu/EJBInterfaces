@@ -3,22 +3,21 @@
 
 ## Description du fonctionnement :
 
-`console
- fr
- `-- alma
-     |-- dto
-     |   |-- catalogue
-     |   |   |-- Categorie.java
-     |   |   `-- Produit.java
-     |   `-- central
-     |       |-- AProduit.java
-     |       |-- CProduit.java
-     |       `-- Item.java
-     `-- interfaces
-         |-- CatalogueRegisteringRemote.java
-         |-- CatalogueRemote.java
-         `-- CentralRemote.java
-`
+	fr
+	`-- alma
+	    |-- dto
+	    |   |-- catalogue
+	    |   |   |-- Categorie.java
+	    |   |   `-- Produit.java
+	    |   `-- central
+	    |       |-- AProduit.java
+	    |       |-- CProduit.java
+	    |       `-- Item.java
+	    `-- interfaces
+	        |-- CatalogueRegisteringRemote.java
+	        |-- CatalogueRemote.java
+	        `-- CentralRemote.java
+
 
 
 * Le package dto contient les Data Transfert Objects, qui sont des classes définissant les objets qu'on transfère entre les différents serveurs.
@@ -54,10 +53,8 @@ Le serveur central fait passer des requêtes aux serveurs catalogues. Or chaque 
 
 Le schéma est simple :
 
-```text
-         1         n..*
-AProduit <>--------> Cproduit
-```
+	         1         n..*
+	AProduit <>--------> Cproduit
 
 
 Un AProduit est envoyé avec une liste de produits fournis.
