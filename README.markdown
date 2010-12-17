@@ -52,17 +52,17 @@ Si vous êtes un serveur frontal, vous faites toutes vos requêtes sur le centra
 
 Le serveur central fait passer des requêtes aux serveurs catalogues. Or chaque serveur catalogue propose des produits qui peuvent être le même, mais du fournisseur associé, avec un prix spécifique et une quantité différente pour chaque. Pour rassembler ces différents éléments avant d'envoyer aux frontaux, on fournit deux classes : un AProduit (ou produit abstrait) qui contient les informations de base : référence, marque, description ; et un CProduit (ou produit concret) qui contient les informations spécifique à chaque *version* du produit, *i.e.* nom de fournisseur, prix et quantité.
 
-	Le schéma est simple :
+Le schéma est simple :
 
 ```text
-					 1         n..*
-	AProduit <>--------> Cproduit
+         1         n..*
+AProduit <>--------> Cproduit
 ```
 
 
-	Un AProduit est envoyé avec une liste de produits fournis.
+Un AProduit est envoyé avec une liste de produits fournis.
 
 
 ## Autres informations
 
-	Normalement il y a un peu de javadoc, donc générez-la, et jetez-y un œil ;)
+Normalement il y a un peu de javadoc, donc générez-la, et jetez-y un œil ;)
