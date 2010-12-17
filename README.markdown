@@ -3,7 +3,7 @@
 
 ### Jar disponible à l'adresse suivante :
 
-http://dl.dropbox.com/u/4930224/objdistr-interfaces-1.0.jar
+http://dl.dropbox.com/u/4930224/objdistr-interfaces-1.1.jar
 
 
 ## Description du fonctionnement :
