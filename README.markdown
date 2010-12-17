@@ -33,7 +33,7 @@ Le package interfaces contient les différentes interfaces à implémenter par l
 
 ### Serveur catalogue
 	
-	Si vous êtes un serveur catalogue, vous devez d'abord vous enregistrer sur le serveur central. Pour ça, il faut récupérer une référence sur **CatalogueRegisteringRemote**. Pour faire l'appel JNDI dessus, le nom de la classe implémentant l'interface est **CatalogueRegistering**, soit le nom de l'interface, moins le *Remote*.
+Si vous êtes un serveur catalogue, vous devez d'abord vous enregistrer sur le serveur central. Pour ça, il faut récupérer une référence sur **CatalogueRegisteringRemote**. Pour faire l'appel JNDI dessus, le nom de la classe implémentant l'interface est **CatalogueRegistering**, soit le nom de l'interface, moins le *Remote*.
 
 	Les informations demandées pour l'enregistrement sont :
 * votre adresse IPv4 soit au format IP:PORT, soit juste IP. Spécifiez le PORT s'il est différent du port JNDI de base, soit 1099 (Si vous n'avez touché à rien par rapport à la configuration de jboss, ne mettez rien.) ; 
