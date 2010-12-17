@@ -35,22 +35,22 @@ Le package interfaces contient les différentes interfaces à implémenter par l
 	
 Si vous êtes un serveur catalogue, vous devez d'abord vous enregistrer sur le serveur central. Pour ça, il faut récupérer une référence sur **CatalogueRegisteringRemote**. Pour faire l'appel JNDI dessus, le nom de la classe implémentant l'interface est **CatalogueRegistering**, soit le nom de l'interface, moins le *Remote*.
 
-	Les informations demandées pour l'enregistrement sont :
+Les informations demandées pour l'enregistrement sont :
 * votre adresse IPv4 soit au format IP:PORT, soit juste IP. Spécifiez le PORT s'il est différent du port JNDI de base, soit 1099 (Si vous n'avez touché à rien par rapport à la configuration de jboss, ne mettez rien.) ; 
 * votre nom de fournisseur qui est un nom vous identifiant. Il doit être unique. Vous pouvez mettre vos noms de binôme par exemple ;
 * le nom de votre implémentation de l'interface **CatalogueRemote** : vous pouvez mettre "/remote" à la fin ou pas, le central gère les deux.
 
-	Le booléen retourné par la méthode *senregistrer* est vrai si ça a fonctionné, et faux dans l'autre cas. Le cas qui peut entraîner une erreur est un catalogue déjà enregistré sous le même nom.
+Le booléen retourné par la méthode *senregistrer* est vrai si ça a fonctionné, et faux dans l'autre cas. Le cas qui peut entraîner une erreur est un catalogue déjà enregistré sous le même nom.
 
 
 ### Serveur frontal
 
-	Si vous êtes un serveur frontal, vous faites toutes vos requêtes sur le central. Pour cela, la classe implémentant l'interface **CentralRemote** s'appelle **CentralService**.
+Si vous êtes un serveur frontal, vous faites toutes vos requêtes sur le central. Pour cela, la classe implémentant l'interface **CentralRemote** s'appelle **CentralService**.
 
 
 ## AProduit, CProduit…
 
-	Le serveur central fait passer des requêtes aux serveurs catalogues. Or chaque serveur catalogue propose des produits qui peuvent être le même, mais du fournisseur associé, avec un prix spécifique et une quantité différente pour chaque. Pour rassembler ces différents éléments avant d'envoyer aux frontaux, on fournit deux classes : un AProduit (ou produit abstrait) qui contient les informations de base : référence, marque, description ; et un CProduit (ou produit concret) qui contient les informations spécifique à chaque *version* du produit, *i.e.* nom de fournisseur, prix et quantité.
+Le serveur central fait passer des requêtes aux serveurs catalogues. Or chaque serveur catalogue propose des produits qui peuvent être le même, mais du fournisseur associé, avec un prix spécifique et une quantité différente pour chaque. Pour rassembler ces différents éléments avant d'envoyer aux frontaux, on fournit deux classes : un AProduit (ou produit abstrait) qui contient les informations de base : référence, marque, description ; et un CProduit (ou produit concret) qui contient les informations spécifique à chaque *version* du produit, *i.e.* nom de fournisseur, prix et quantité.
 
 	Le schéma est simple :
 
