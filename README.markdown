@@ -4,20 +4,20 @@
 ## Description du fonctionnement :
 
 `console
-fr
-`-- alma
-    |-- dto
-    |   |-- catalogue
-    |   |   |-- Categorie.java
-    |   |   `-- Produit.java
-    |   `-- central
-    |       |-- AProduit.java
-    |       |-- CProduit.java
-    |       `-- Item.java
-    `-- interfaces
-        |-- CatalogueRegisteringRemote.java
-        |-- CatalogueRemote.java
-        `-- CentralRemote.java
+ fr
+ `-- alma
+     |-- dto
+     |   |-- catalogue
+     |   |   |-- Categorie.java
+     |   |   `-- Produit.java
+     |   `-- central
+     |       |-- AProduit.java
+     |       |-- CProduit.java
+     |       `-- Item.java
+     `-- interfaces
+         |-- CatalogueRegisteringRemote.java
+         |-- CatalogueRemote.java
+         `-- CentralRemote.java
 `
 
 
