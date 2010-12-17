@@ -1,6 +1,11 @@
 # Interfaces pour le projet d'Objets distribués.
 
 
+### Jar disponible à l'adresse suivante :
+
+http://dl.dropbox.com/u/4930224/objdistr-interfaces-1.0.jar
+
+
 ## Description du fonctionnement :
 
 	fr
