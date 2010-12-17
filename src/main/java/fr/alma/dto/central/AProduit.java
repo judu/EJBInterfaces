@@ -5,6 +5,7 @@
 package fr.alma.dto.central;
 
 import fr.alma.dto.catalogue.Categorie;
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,69 +13,65 @@ import java.util.List;
  *
  * @author judu
  */
-public class AProduit {
+public class AProduit implements Serializable {
 
-   /**
-    * Marque du produit.
-    */
-   private String marque;
+    private static final Long SerialVersionUID = 1L;
+    /**
+     * Marque du produit.
+     */
+    private String marque;
+    /**
+     * Modele du produit
+     */
+    private String modele;
+    private String description;
+    private Categorie categorie;
+    private List<CProduit> produitFournis;
 
-   /**
-    * Modele du produit
-    */
-   private String modele;
+    public Categorie getCategorie() {
+        return categorie;
+    }
 
-   private String description;
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
 
-   private Categorie categorie;
+    public String getDescription() {
+        return description;
+    }
 
-   private List<CProduit> produitFournis;
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-   public Categorie getCategorie() {
-      return categorie;
-   }
+    public String getMarque() {
+        return marque;
+    }
 
-   public void setCategorie(Categorie categorie) {
-      this.categorie = categorie;
-   }
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
 
-   public String getDescription() {
-      return description;
-   }
+    public String getModele() {
+        return modele;
+    }
 
-   public void setDescription(String description) {
-      this.description = description;
-   }
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
 
-   public String getMarque() {
-      return marque;
-   }
+    public List<CProduit> getProduitFournis() {
+        return produitFournis;
+    }
 
-   public void setMarque(String marque) {
-      this.marque = marque;
-   }
+    public void setProduitFournis(List<CProduit> produitFournis) {
+        this.produitFournis = produitFournis;
+    }
 
-   public String getModele() {
-      return modele;
-   }
-
-   public void setModele(String modele) {
-      this.modele = modele;
-   }
-
-   public List<CProduit> getProduitFournis() {
-      return produitFournis;
-   }
-
-   public void setProduitFournis(List<CProduit> produitFournis) {
-      this.produitFournis = produitFournis;
-   }
-
-   public void addProduitFourni(CProduit produit) {
-      if(this.produitFournis == null) {
-         this.produitFournis = new LinkedList<CProduit>();
-      }
-      this.produitFournis.add(produit);
-   }
-
+    public void addProduitFourni(CProduit produit) {
+        if (this.produitFournis == null) {
+            this.produitFournis = new LinkedList<CProduit>();
+        }
+        this.produitFournis.add(produit);
+    }
 }

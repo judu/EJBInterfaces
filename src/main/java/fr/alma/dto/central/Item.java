@@ -4,11 +4,13 @@
  */
 package fr.alma.dto.central;
 
+import java.io.Serializable;
+
 /**
  * C'est maintenant une classe pour pouvoir l'instancier côté client.
  * @author E056449H
  */
-public class Item {
+public class Item implements Serializable {
 
    private String fournisseur;
 
